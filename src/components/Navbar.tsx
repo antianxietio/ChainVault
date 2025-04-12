@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import WalletButton from "./WalletButton";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,9 +20,7 @@ export default function Navbar() {
           <Link href="/" className="hover:text-accent transition">Home</Link>
           <Link href="#how-it-works" className="hover:text-accent transition">How It Works</Link>
           <Link href="/dashboard" className="hover:text-accent transition">Dashboard</Link>
-          <button className="bg-accent text-white px-4 py-2 rounded hover:opacity-80 transition">
-            Connect Wallet
-          </button>
+          <WalletButton />
         </div>
 
         {/* Mobile Toggle */}
@@ -37,9 +37,7 @@ export default function Navbar() {
           <Link href="/" className="block hover:text-accent">Home</Link>
           <Link href="#how-it-works" className="block hover:text-accent">How It Works</Link>
           <Link href="/dashboard" className="block hover:text-accent">Dashboard</Link>
-          <button className="bg-accent w-full text-white px-4 py-2 rounded hover:opacity-80 transition">
-            Connect Wallet
-          </button>
+          <WalletButton />
         </div>
       )}
     </nav>

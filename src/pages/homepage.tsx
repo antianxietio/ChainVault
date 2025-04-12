@@ -1,25 +1,17 @@
 "use client";
 
+import Navbar from "@/components/Navbar";
 import Footer from "@/components/footer";
-import Navbar from "../components/Navbar";
+import Hero from "@/components/Hero";
+import WalletButton from "@/components/WalletButton";
+import LockInterface from "@/components/LockInterface";
+
 
 export default function Homepage() {
   return (
     <main className="bg-black text-white min-h-screen">
       <Navbar />
-      
-      {/* Hero Section */}
-      <section className="text-center py-28 px-6 bg-gradient-to-b from-black via-gray-900 to-black">
-        <h1 className="text-5xl md:text-7xl font-bold text-gold-400 mb-6">
-          Unlock NFT Liquidity
-        </h1>
-        <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10">
-          Borrow and lend using NFTs as collateral. Secure. Trustless. Instant.
-        </p>
-        <button className="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition">
-          Get Started
-        </button>
-      </section>
+      <Hero />
 
       {/* How It Works */}
       <section className="py-24 px-6 bg-[#0c0c0c]">
@@ -82,23 +74,32 @@ export default function Homepage() {
               key={idx}
               className="bg-[#1a1a1a] border border-gray-800 hover:border-violet-600 transition rounded-xl p-6"
             >
-              <h3 className="text-xl font-bold mb-3 text-gold-300">{feature.title}</h3>
+              <h3 className="text-xl font-bold mb-3 text-gold-300">
+                {feature.title}
+              </h3>
               <p className="text-gray-400 text-sm">{feature.desc}</p>
             </div>
           ))}
         </div>
       </section>
+
+      {/* Call to Action */}
       <section className="py-20 px-6 bg-[#111111] text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-gold-400 mb-6">
           Ready to Unlock Your NFT's Potential?
         </h2>
         <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-          Connect your wallet and start borrowing or lending NFTs with full security and transparency.
+          Connect your wallet and start borrowing or lending NFTs with full
+          security and transparency.
         </p>
-        <button className="bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 px-6 rounded-xl text-lg transition">
-          Connect Wallet
-        </button>
+        <div className="flex justify-center">
+        <WalletButton />
+        </div>
+        <div className="mt-12 ">
+          <LockInterface />
+        </div>
       </section>
+      
       <Footer />
     </main>
   );

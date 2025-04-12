@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex justify-center space-x-6">
           <a href="#" className="hover:text-white">About</a>
           <a href="#" className="hover:text-white">Docs</a>
-          <a href="https://github.com/antianxietio/chainvault" target="_blank" className="hover:text-white">
+          <a href="https://github.com/antianxietio/chainvault" target="_blank" rel="noopener noreferrer" className="hover:text-white">
             GitHub
           </a>
           <a href="#" className="hover:text-white">Privacy</a>
